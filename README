@@ -1,9 +1,13 @@
 QTeapot by Tommy Hartmann
 -----------------------
 
-Required following package in Linux:
-
+Required following packages:
 - mesa
 - qt4
 - freeglut
 - qmake
+
+To build type the following commands:
+qmake && make
+
+
