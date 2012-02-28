@@ -1,0 +1,9 @@
+QTeapot by Tommy Hartmann
+-----------------------
+
+Required following package in Linux:
+
+- mesa
+- qt4
+- freeglut
+- qmake
