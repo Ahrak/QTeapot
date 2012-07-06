@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += opengl
+QT       += core gui opengl
 
 TARGET = QTeapot
 TEMPLATE = app
@@ -13,9 +13,9 @@ TEMPLATE = app
 SOURCES += main.cpp\
     Class3D/CVector3d.cpp \
     Class3D/CPoint3d.cpp \
-    Grafik.cpp \
     OpenGL/QOpenGL3D.cpp \
     OpenGL/QOpenGL.cpp \
+    Grafik.cpp \
     QTeapotDlg.cpp \
     MyOpenGL.cpp
 
@@ -28,7 +28,10 @@ HEADERS  += \
     QTeapotDlg.h \
     MyOpenGL.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialog.ui
 
 LIBS += -lGL -lglut -lGLU
 LIBS += -L/usr/lib/libglut.so
+
+OTHER_FILES +=

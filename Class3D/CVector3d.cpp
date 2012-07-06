@@ -1,16 +1,17 @@
 #include "CVector3d.h"
 
-Vector3D::Vector3D(float a, float b, float c)
+Vector3D::Vector3D(double a, double b, double c)
+    : m_a(a)
+    , m_b(b)
+    , m_c(c)
 {
-    this->a = a;
-    this->b = b;
-    this->c = c;
+   //
 }
 
-void Vector3D::set(float a, float b, float c)
+void Vector3D::set(double a, double b, double c)
 {
-    this->a = a;
-    this->b = b;
-    this->c = c;
+    this->m_a = a;
+    this->m_b = b;
+    this->m_c = c;
 }
 

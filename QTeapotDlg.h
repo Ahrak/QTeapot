@@ -5,55 +5,115 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <QMainWindow>
+#include <QDockWidget>
 #include "Grafik.h"
 #include "MyOpenGL.h"
+#include "ui_dialog.h"
 
-class QTeapotDlg : public QWidget
+//UI
+namespace Ui {
+class OpenGLCamDialog;
+}
+
+/**
+ * camera settings dialog
+ * @author Tommy Hartmann
+ */
+class QTeapotDlg : public QDockWidget
 {
     Q_OBJECT
 
 public:
-    QTeapotDlg();
+
+    /**
+     * Constructor
+     * @param parent parent Widget
+     */
+    explicit QTeapotDlg(QWidget* parent = 0);
+
+    /**
+     * Destructor
+     */
+    ~QTeapotDlg();
+
+    /**
+     * prints a line to log widget
+     * @param line line that should be printed
+     */
     void out(QString line);
 
 protected:
-    //openGL Window
-    MyOpenGL* glWidget;
+
+    /** OpenGL Window */
+    MyOpenGL* m_glWidget;
+
+    /** Central Widget */
+    QWidget* m_centralWidget;
 
 private:
 
-    CGrafik mGrafik;
+    /** UI Definition */
+    Ui::OpenGLCamDialog *ui;
 
-    //vars
-    float mZoom;
-    float mPosXY;
-    float mPosZ;
+    /** Graphic Object */
+    CGrafik m_graphic;
 
-    float mCamX;
-    float mCamY;
-    float mCamZ;
+    /** zoom value */
+    double m_zoom;
+    /** XY position value */
+    double m_posXY;
+    /** z position value */
+    double m_posZ;
 
-    //valueLabels
-    QLabel* valueZoom;
-    QLabel* valueXY;
-    QLabel* valueZ;
-    QLineEdit * editPX;
-    QLineEdit * editPY;
-    QLineEdit * editPZ;
-
-    QTextEdit * output;
+    /** lookAt X */
+    double m_camX;
+    /** lookAt Y */
+    double m_camY;
+    /** lookAt Z */
+    double m_camZ;
 
 public slots:
+
+    /**
+     * Called if zoom has changed
+     * @param zoom new zoom value
+     */
     void changeZoom(int zoom);
+
+    /**
+     * Called if XY position has changed
+     * @param xy new XY value
+     */
     void changeXY(int xy);
+
+    /**
+     * Called if Z position has changed
+     * @param z new Z value
+     */
     void changeZ(int z);
+
+    /**
+     * Called if loolAt has changed
+     */
     void changeLookAt();
+
+    /**
+     * Called if Camera position and/or lookAt has changed
+     */
     void onCamera();
+
+    /**
+     * Called if window is closed
+     */
     void onClose();
 
 signals:
-    void cameraChanged();
 
+    /**
+     * signals that some camera values were changed
+     */
+    void cameraChanged();
 
 };
 

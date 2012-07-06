@@ -1,16 +1,17 @@
 #include "CPoint3d.h"
 
-Point3D::Point3D(float x, float y, float z)
+Point3D::Point3D(double x, double y, double z)
+    : m_x(x)
+    , m_y(y)
+    , m_z(z)
 {
-    this->x = x;
-    this->y = y;
-    this->z = z;
+    //
 }
 
 
-void Point3D::set(float x, float y, float z)
+void Point3D::set(double x, double y, double z)
 {
-    this->x = x;
-    this->y = y;
-    this->z = z;
+    this->m_x = x;
+    this->m_y = y;
+    this->m_z = z;
 }
