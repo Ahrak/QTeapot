@@ -4,11 +4,14 @@
 #
 #-------------------------------------------------
 
-QT       += core gui opengl
+QT       += core gui opengl p
 
 TARGET = QTeapot
 TEMPLATE = app
+LANGUAGE = C++
+CONFIG   += console precompile_header
 
+PRECOMPILED_HEADER = stdafx.h
 
 SOURCES += main.cpp\
     Class3D/CVector3d.cpp \
@@ -17,16 +20,19 @@ SOURCES += main.cpp\
     OpenGL/QOpenGL.cpp \
     Grafik.cpp \
     QTeapotDlg.cpp \
-    MyOpenGL.cpp
+    MyOpenGL.cpp \
+    mainwindow.cpp
 
-HEADERS  += \
+HEADERS  += stdafx.h \
     Class3D/CVector3d.h \
     Class3D/CPoint3d.h \
     Grafik.h \
     OpenGL/QOpenGL3D.h \
     OpenGL/QOpenGL.h \
     QTeapotDlg.h \
-    MyOpenGL.h
+    MyOpenGL.h \
+    mainwindow.h \
+    stdafx.h
 
 FORMS    += mainwindow.ui \
     dialog.ui

@@ -1,11 +1,4 @@
-#include <QtGui>
-#include <QtOpenGL>
-#include <QGLWidget>
-#include <GL/glut.h>
-#include <GL/glu.h>
-#include <math.h>
-#include "MyOpenGL.h"
-
+#include "stdafx.h"
 
 MyOpenGL::MyOpenGL() : QOpenGL3D()
 {
@@ -72,4 +65,3 @@ void MyOpenGL::resizeGL(int w, int h)
     glViewport(0,0,size,size);
     update();
 }
-

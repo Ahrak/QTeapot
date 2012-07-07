@@ -1,14 +1,33 @@
 #ifndef GRAFIK_H
 #define GRAFIK_H
 
-class CGrafik
+/**
+ * Graphic that will be drawn on the openGL Widget
+ * @author Tommy Hartmann
+ */
+class CGraphic
 {
 public:
-    CGrafik();
-    ~CGrafik();
-    /** initialisierung */
+
+    /**
+     * Constructor
+     */
+    CGraphic();
+
+    /**
+     * Destructor
+     */
+    ~CGraphic();
+
+    /**
+     * Initializes OpenGL Elements
+     */
     void Init();
-    /** Zeichnen */
+
+
+    /**
+     * Draws OpenGL Elements
+     */
     void Draw();
 };
 

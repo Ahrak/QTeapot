@@ -1,4 +1,4 @@
-#include "CVector3d.h"
+#include "stdafx.h"
 
 Vector3D::Vector3D(double a, double b, double c)
     : m_a(a)

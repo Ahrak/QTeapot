@@ -1,5 +1,4 @@
-#include "QOpenGL3D.h"
-#include <QtOpenGL>
+#include "stdafx.h"
 
 QOpenGL3D::QOpenGL3D(void) : QOpenGL()
 {

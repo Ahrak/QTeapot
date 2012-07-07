@@ -1,10 +1,11 @@
-#include <QGLWidget>
-#include "Class3D/CPoint3d.h"
-#include "Class3D/CVector3d.h"
-#include "Grafik.h"
-#include "GL/glu.h"
+#ifndef MYOPENGL_H
+#define MYOPENGL_H
+
 #include "OpenGL/QOpenGL3D.h"
 
+/**
+ *
+ */
 class MyOpenGL : public QOpenGL3D
 {
 
@@ -18,5 +19,7 @@ class MyOpenGL : public QOpenGL3D
         void resizeGL(int w, int h);
 
     private:
-        CGrafik mGrafik;
+        CGraphic mGrafik;
 };
+
+#endif

@@ -3,18 +3,20 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 
-CGrafik::CGrafik()
+CGraphic::CGraphic()
 {
-
+    qDebug() << "CONSTRUCTOR";
 }
 
-CGrafik::~CGrafik()
+CGraphic::~CGraphic()
 {
-
 }
 
-void CGrafik::Init()
+void CGraphic::Init()
 {
+
+    qDebug() << "INIT";
+
     glNewList(1, GL_COMPILE);
         // Roter Teapot, Ausgiesser Richtung Osten
         glColor3f(1,0,0);
@@ -40,7 +42,7 @@ void CGrafik::Init()
     glEndList();
 }
 
-void CGrafik::Draw()
+void CGraphic::Draw()
 {
     //Gouraud Schattierung
     glShadeModel(GL_SMOOTH);

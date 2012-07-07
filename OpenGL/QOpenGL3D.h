@@ -1,5 +1,6 @@
-#include "Class3D/CPoint3d.h"
-#include "Class3D/CVector3d.h"
+#ifndef QOPENGL3D_H
+#define QOPENGL3D_H
+
 #include "OpenGL/QOpenGL.h"
 
 class QOpenGL3D : public QOpenGL
@@ -20,3 +21,5 @@ protected:
     Point3D m_Pposition, m_Ptarget;
     Vector3D m_VviewingUp;
 };
+
+#endif

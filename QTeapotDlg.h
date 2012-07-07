@@ -1,13 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <QWidget>
-#include <QLabel>
-#include <QLineEdit>
-#include <QTextEdit>
-#include <QMainWindow>
 #include <QDockWidget>
-#include "Grafik.h"
 #include "MyOpenGL.h"
 #include "ui_dialog.h"
 
@@ -30,7 +24,7 @@ public:
      * Constructor
      * @param parent parent Widget
      */
-    explicit QTeapotDlg(QWidget* parent = 0);
+    explicit QTeapotDlg(MyOpenGL* openGL, QWidget* parent = 0);
 
     /**
      * Destructor
@@ -55,9 +49,6 @@ private:
 
     /** UI Definition */
     Ui::OpenGLCamDialog *ui;
-
-    /** Graphic Object */
-    CGrafik m_graphic;
 
     /** zoom value */
     double m_zoom;

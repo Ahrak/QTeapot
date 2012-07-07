@@ -1,8 +1,4 @@
-// OpenGL.cpp : Implementierungsdatei
-//
-#include "QOpenGL.h"
-#include <GL/glut.h>
-#include <QGLFormat>
+#include "stdafx.h"
 
 QOpenGL::QOpenGL() : QGLWidget()
 {
@@ -34,7 +30,7 @@ bool QOpenGL::InitOpenGL(char* text, int x_left, int x_right, int y_top, int y_b
     return false;  // Melde: Hier ist was schief gelaufen
 }
 
-void QOpenGL::setGrafik(CGrafik* grafik)
+void QOpenGL::setGrafik(CGraphic* grafik)
 {
     m_pGrafik = grafik;
 }
